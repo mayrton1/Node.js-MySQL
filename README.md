@@ -12,12 +12,12 @@ Matthew Ayrton, University of Utah Coding Bootcamp(https://github.com/mayrton1/N
 **Images**
 
 
-![](images/node-bamazon 2.png)
+![](images/node-bamazon2.png)
 
 
-![](images/node-bamazon 1.png)
+![](images/node-bamazon1.png)
 
-![](images/node-bamazon 3.png)
+![](images/node-bamazon3.png)
 
 Challenge #1: Customer View (Minimum Requirement)
 
