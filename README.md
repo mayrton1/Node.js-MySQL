@@ -11,13 +11,13 @@ Matthew Ayrton, University of Utah Coding Bootcamp()
 
 **Images**
 
--image 1
-![](images/node bamazon 2.png)
 
--image 2
-![](images/node bamazon 1 .png)
+![](images/node-bamazon2.png)
 
-![](images/node bamazon 3.png)
+
+![](images/node-bamazon1.png)
+
+![](images/node-bamazon3.png)
 
 Challenge #1: Customer View (Minimum Requirement)
 
