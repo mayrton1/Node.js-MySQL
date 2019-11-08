@@ -17,7 +17,7 @@ connection.query('SELECT * FROM products',
   	if (err) throw err;
   	
   	console.log("Item \t Product \t Department \t Price \t Stock");
-  	console.log("-----------------------------------");
+  	console.log("-----------------------------------------------");
   	for (var i = 0; i < res.length; i++) {
   		console.log(res[i].ItemID + "   " + res[i].ProductName + " \t " + res[i].DepartmentName + " \t " + res[i].Price + " \t " + res[i].StockQuantity);
     }
@@ -38,22 +38,22 @@ connection.query('SELECT * FROM products',
             }]).then(function(ansQty) {
                console.log(ansProd.product);
              
-              connection.query('SELECT * FROM products WHERE ?', {ProductName: ansProd.product}, function(err, res) {
+              connection.query('SELECT * FROM products WHERE ItemID=?', [ansProd.product], function(err, res) {
                 if (err) throw err;
              
                 
                   if (res[0].StockQuantity > ansQty.qty) {
                    
                     var cost = res[0].Price * ansQty.qty
+                    var newQty= res[0].StockQuantity - ansQty.qty
                     console.log("-----------------------------------");
                     console.log("Your order has been placed! \nThe total cost is $" + cost.toFixed(2) + "\nThank you!")
                    
                       var newQty = res[0].StockQuantity - ansQty.qty
-                      connection.query("UPDATE products SET ? WHERE ?", [{
-                          StockQuantity: newQty
-                      }, {
-                          ProductName: ansProd.product
-                      }], function(err, res) {});
+                      connection.query("UPDATE products SET StockQuantity =? WHERE ItemID=?", 
+                      [newQty, ansProd.product ],
+                     
+                      function(err, res) {});
                   
                   } else {
                     console.log("-----------------------------------");
@@ -67,11 +67,8 @@ connection.query('SELECT * FROM products',
           }
     })
    
-        //INITIALIZES THE VARIABLE newGuy TO BE A Programmer OBJECT WHICH WILL TAKE IN ALL OF THE USER'S ANSWERS TO THE QUESTIONS ABOVE
-        // var custBuy = new Programmer(answers.name, answers.position, answers.age, answers.language);
-        //printInfo METHOD IS RUN TO SHOW THAT THE newGuy OBJECT WAS SUCCESSFULLY CREATED AND FILLED
-        // newGuy.printInfo();
-}); // connection.query('SELECT * FROM products', 
+        
+}); 
 
 
 
