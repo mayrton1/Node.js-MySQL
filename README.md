@@ -7,7 +7,7 @@ For this assignment, I created a storefront application called bamazon. Bamazon 
 -MYSQL 
 -Javascript
 
-Matthew Ayrton, University of Utah Coding Bootcamp()
+Matthew Ayrton, University of Utah Coding Bootcamp(https://github.com/mayrton1/Node.js-MySQL)
 
 **Images**
 
