@@ -7,17 +7,17 @@ For this assignment, I created a storefront application called bamazon. Bamazon 
 -MYSQL 
 -Javascript
 
-Matthew Ayrton, University of Utah Coding Bootcamp()
+Matthew Ayrton, University of Utah Coding Bootcamp(https://github.com/mayrton1/Node.js-MySQL)
 
 **Images**
 
 
-![](images/node-bamazon2.png)
+![](images/node-bamazon 2.png)
 
 
-![](images/node-bamazon1.png)
+![](images/node-bamazon 1.png)
 
-![](images/node-bamazon3.png)
+![](images/node-bamazon 3.png)
 
 Challenge #1: Customer View (Minimum Requirement)
 
